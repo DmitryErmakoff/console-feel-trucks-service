@@ -21,8 +21,7 @@ public class Main {
             System.exit(1);
         }
 
-        ArrayList<Box> boxList = null;
-        boxList = boxService.loadBoxesFromFile(file.getPath());
+        ArrayList<Box> boxList = boxService.loadBoxesFromFile(file.getPath());
 
         boxList = boxService.arrangeBoxesByVolume(boxList);
         List<Truck> truckList = boxPlacementService.fillTrucksWithBoxes(boxList);
